@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | The Barber Shop Bahadurgarh</title>
+    <meta name="description" content="Read what our satisfied customers have to say about our premium barber services.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: calc(var(--space-xl) * 1.5) 0 var(--space-xl);
+            background-color: var(--bg-darker);
+            text-align: center;
+        }
+        
+        .page-title {
+            color: var(--gold-primary);
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: var(--space-sm);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            padding: var(--space-lg);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: left;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-sm);
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-primary);
+            color: var(--bg-darker);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 15px;
+            font-family: var(--font-heading);
+        }
+
+        .review-meta h4 {
+            color: var(--text-main);
+            margin-bottom: 2px;
+            font-size: 1.1rem;
+        }
+
+        .review-stars {
+            color: var(--gold-primary);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .review-card p {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .review-stats {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            padding: var(--space-md);
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            border: 1px solid var(--gold-primary);
+        }
+
+        .review-stats .rating-number {
+            font-size: 4rem;
+            font-family: var(--font-heading);
+            color: var(--gold-primary);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            .review-stats .rating-number {
+                font-size: 3rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">The Barber <span>Shop</span></a>
+            <button class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html" class="btn btn-outline" style="padding: 0.5rem 1rem; margin-top: -0.5rem;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container fade-in-up">
+            <h1 class="page-title">Client Reviews</h1>
+            <p>Our reputation is built on exceptional service.</p>
+        </div>
+    </header>
+
+    <!-- Reviews Section -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container fade-in-up">
+            
+            <div class="review-stats">
+                <div class="rating-number">5.0</div>
+                <div class="review-stars" style="font-size: 1.5rem; margin-bottom: 10px;">★★★★★</div>
+                <p>Based on Google Reviews</p>
+                <a href="#" class="btn btn-primary" style="margin-top: 15px;">Leave a Review</a>
+            </div>
+
+            <div class="reviews-grid">
+                
+                <!-- Review 1 -->
+                <div class="review-card fade-in-up">
+                    <div class="review-header">
+                        <div class="review-avatar">N</div>
+                        <div class="review-meta">
+                            <h4>Niraj Shah</h4>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"I liked. Please try n feel good."</p>
+                </div>
+
+                <!-- Placeholder Review 2 -->
+                <div class="review-card fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="review-header">
+                        <div class="review-avatar">A</div>
+                        <div class="review-meta">
+                            <h4>Aryan K.</h4>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"Best fade in Bahadurgarh. The attention to detail is unmatched, and the shop is incredibly clean."</p>
+                </div>
+
+                <!-- Placeholder Review 3 -->
+                <div class="review-card fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="review-header">
+                        <div class="review-avatar">S</div>
+                        <div class="review-meta">
+                            <h4>Samir R.</h4>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"Premium experience from the moment you walk in. The hot towel shave is a must-try."</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>The Barber Shop</h3>
+                    <p>Premium grooming experience, modern haircuts, and classic barber services in Bahadurgarh.</p>
+                </div>
+                <!-- ... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Barber Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

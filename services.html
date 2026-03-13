@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing | The Barber Shop Bahadurgarh</title>
+    <meta name="description"
+        content="Explore our premium barber services including classic haircuts, modern fades, beard styling, and kids grooming.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: calc(var(--space-xl) * 1.5) 0 var(--space-xl);
+            background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.95)), url('images/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .page-title {
+            color: var(--gold-primary);
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: var(--space-sm);
+        }
+
+        .services-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .service-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background-color var(--transition-fast);
+        }
+
+        .service-row:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 4px;
+        }
+
+        .service-info {
+            flex: 1;
+        }
+
+        .service-info h3 {
+            color: var(--text-main);
+            margin-bottom: 5px;
+            font-family: var(--font-primary);
+            font-size: 1.4rem;
+        }
+
+        .service-info p {
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .service-meta {
+            font-size: 0.85rem;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-action {
+            text-align: right;
+            min-width: 150px;
+        }
+
+        .service-price {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .book-sm-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .book-sm-btn:hover {
+            background-color: var(--gold-primary);
+            color: var(--bg-darker);
+        }
+
+        @media (max-width: 600px) {
+            .service-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .service-action {
+                text-align: left;
+                margin-top: 15px;
+            }
+
+            .service-price {
+                display: inline-block;
+                margin-right: 15px;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">The Barber <span>Shop</span></a>
+            <button class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html" class="btn btn-outline" style="padding: 0.5rem 1rem; margin-top: -0.5rem;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container fade-in-up">
+            <h1 class="page-title">Services & Pricing</h1>
+            <p>Premium grooming tailored to your style.</p>
+        </div>
+    </header>
+
+    <!-- Services List Section -->
+    <section class="section-padding">
+        <div class="container fade-in-up">
+            <div class="services-list">
+
+                <!-- Item 1 -->
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>Classic Haircut</h3>
+                        <p>Traditional shears cut, neck shave, styling, and a hot towel finish.</p>
+                        <span class="service-meta"><i class="far fa-clock"></i> 30-40 MINS</span>
+                    </div>
+                    <div class="service-action">
+                        <span class="service-price">₹120</span>
+                        <a href="book.html?service=Classic+Haircut" class="book-sm-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>Modern Fade Cut</h3>
+                        <p>Precision skin fade with sharp lines and textured top styling.</p>
+                        <span class="service-meta"><i class="far fa-clock"></i> 45 MINS</span>
+                    </div>
+                    <div class="service-action">
+                        <span class="service-price">₹120</span>
+                        <a href="book.html?service=Modern+Fade+Cut" class="book-sm-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>Beard Styling & Trim</h3>
+                        <p>Hot towel prep, straight razor line up, trimming, and beard conditioning.</p>
+                        <span class="service-meta"><i class="far fa-clock"></i> 25 MINS</span>
+                    </div>
+                    <div class="service-action">
+                        <span class="service-price">₹120</span>
+                        <a href="book.html?service=Beard+Styling" class="book-sm-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>Hair + Beard Combo</h3>
+                        <p>The ultimate grooming package. Full haircut and comprehensive beard styling.</p>
+                        <span class="service-meta"><i class="far fa-clock"></i> 60 MINS</span>
+                    </div>
+                    <div class="service-action">
+                        <span class="service-price">₹120</span>
+                        <a href="book.html?service=Hair+and+Beard+Combo" class="book-sm-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>Kids Haircut</h3>
+                        <p>Styles for the young gentlemen (Under 12 years).</p>
+                        <span class="service-meta"><i class="far fa-clock"></i> 30 MINS</span>
+                    </div>
+                    <div class="service-action">
+                        <span class="service-price">₹120</span>
+                        <a href="book.html?service=Kids+Haircut" class="book-sm-btn">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>Hair Wash & Styling</h3>
+                        <p>Invigorating scalp massage, thorough wash, and blow-dry styling with premium products.</p>
+                        <span class="service-meta"><i class="far fa-clock"></i> 20 MINS</span>
+                    </div>
+                    <div class="service-action">
+                        <span class="service-price">₹300</span>
+                        <a href="book.html?service=Hair+Wash+and+Styling" class="book-sm-btn">Book Now</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="margin-top: var(--space-xl);">
+                <p><em>* Prices are subject to consultation and specific requirements.</em></p>
+                <a href="contact.html" class="btn btn-outline" style="margin-top: var(--space-sm);">Contact Us for
+                    Details</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content (same as index) -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>The Barber Shop</h3>
+                    <p>Premium grooming experience, modern haircuts, and classic barber services in Bahadurgarh.</p>
+                </div>
+                <!-- ... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Barber Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

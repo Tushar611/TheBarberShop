@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Barber Shop Bahadurgarh</title>
+    <meta name="description" content="Contact The Barber Shop in Omaxe Galleria, Bahadurgarh to book an appointment or get directions.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: calc(var(--space-xl) * 1.5) 0 var(--space-xl);
+            background-color: var(--bg-darker);
+            text-align: center;
+        }
+        
+        .page-title {
+            color: var(--gold-primary);
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: var(--space-sm);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+        }
+
+        .contact-details h3 {
+            color: var(--gold-primary);
+            margin-bottom: var(--space-md);
+            font-size: 1.8rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+
+        .info-img {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-primary);
+            color: var(--bg-darker);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .info-text h4 {
+            color: var(--text-main);
+            margin-bottom: 5px;
+            font-family: var(--font-primary);
+        }
+
+        .info-text p {
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            padding: var(--space-lg);
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            background: var(--bg-dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+        }
+
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .map-container iframe {
+                height: 300px;
+            }
+            .info-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .info-img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .contact-details {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">The Barber <span>Shop</span></a>
+            <button class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="book.html" class="btn btn-outline" style="padding: 0.5rem 1rem; margin-top: -0.5rem;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container fade-in-up">
+            <h1 class="page-title">Contact Us</h1>
+            <p>Ready for a fresh look? Get in touch today.</p>
+        </div>
+    </header>
+
+    <!-- Contact Info & Form -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-container">
+                
+                <div class="contact-details fade-in-up">
+                    <h3>Information</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-img">📍</div>
+                        <div class="info-text">
+                            <h4>Address</h4>
+                            <p>Shop No 53, Omaxe Galleria</p>
+                            <p>Bahadurgarh, Haryana 124507</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-img">📞</div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>090458 33581</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-img">💬</div>
+                        <div class="info-text">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/918709298368" target="_blank">Chat with us directly</a></p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: var(--space-lg);">
+                        <a href="tel:09045833581" class="btn btn-primary" style="margin-right: 10px;">Call Now</a>
+                        <a href="https://maps.google.com/?q=Shop+No+53,+Omaxe+Galleria,+Bahadurgarh,+Haryana+124507" target="_blank" class="btn btn-outline">Get Directions</a>
+                    </div>
+                </div>
+
+                <div class="contact-form fade-in-up"" style="transition-delay: 0.2s;">
+                    <h3>Send a Message</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent! We will contact you shortly.');">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="haircut">Classic Haircut</option>
+                                <option value="fade">Modern Fade</option>
+                                <option value="beard">Beard Styling</option>
+                                <option value="combo">Hair + Beard Combo</option>
+                                <option value="other">Other/Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Additional details or preferred date/time..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section fade-in-up">
+        <div class="map-container">
+            <!-- Google Maps Embed for Omaxe Galleria Bahadurgarh -->
+            <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=The%20Barbar%20Shop,%20Omaxe%20Galleria,%20Bahadurgarh&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>The Barber Shop</h3>
+                    <p>Premium grooming experience, modern haircuts, and classic barber services in Bahadurgarh.</p>
+                </div>
+                <!-- ... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Barber Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

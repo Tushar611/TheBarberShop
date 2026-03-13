@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | The Barber Shop Bahadurgarh</title>
+    <meta name="description" content="Learn about our commitment to craftsmanship, hygiene, and style at The Barber Shop in Bahadurgarh.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: calc(var(--space-xl) * 1.5) 0 var(--space-xl);
+            background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.95)), url('images/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        
+        .page-title {
+            color: var(--gold-primary);
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: var(--space-sm);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--gold-primary);
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-sm);
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-lg);
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: var(--space-md);
+        }
+
+        .feature-box h4 {
+            color: var(--gold-primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 900px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .page-title {
+                font-size: 2.5rem;
+            }
+            .about-text h2 {
+                font-size: 1.8rem;
+            }
+            .feature-box {
+                padding: var(--space-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">The Barber <span>Shop</span></a>
+            <button class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html" class="btn btn-outline" style="padding: 0.5rem 1rem; margin-top: -0.5rem;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container fade-in-up">
+            <h1 class="page-title">Our Story</h1>
+            <p>Craftsmanship, Hygiene, and Style in Bahadurgarh.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in-up">
+                    <span class="section-subtitle">The Philosophy</span>
+                    <h2>A Higher Standard of Grooming</h2>
+                    <p>At The Barber Shop, we believe that a haircut is more than just a quick trim—it's an experience. Located in the heart of Omaxe Galleria, Bahadurgarh, we've built a reputation for delivering premium, meticulous grooming services in a luxury environment.</p>
+                    <p>Our expert barbers blend classic techniques with modern trends to ensure you leave looking and feeling your absolute best. Whether it's a razor-sharp fade or a precisely tailored hot-towel beard shave, we pay attention to every detail.</p>
+                    <p>We maintain the highest standards of hygiene, using strictly sanitized tools and premium products for every client because your health and style are our paramount commitments.</p>
+                </div>
+                <div class="about-image fade-in-up">
+                    <img src="images/gallery/interior1.png" alt="Barber Shop Interior">
+                </div>
+            </div>
+
+            <div class="features-grid fade-in-up">
+                <div class="feature-box">
+                    <h4>Master Barbers</h4>
+                    <p>Highly trained professionals passionate about their craft.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Premium Products</h4>
+                    <p>We exclusively use top-tier grooming and styling products.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Strict Hygiene</h4>
+                    <p>Hospital-grade sterilization of all tools after every use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>The Barber Shop</h3>
+                    <p>Premium grooming experience, modern haircuts, and classic barber services in Bahadurgarh.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>Shop No 53, Omaxe Galleria<br>Bahadurgarh, HR 124507</p>
+                    <p>090458 33581</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Barber Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

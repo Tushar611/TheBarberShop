@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | The Barber Shop Bahadurgarh</title>
+    <meta name="description" content="View our portfolio of premium haircuts, beard styles, and our luxury barber shop interior.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: calc(var(--space-xl) * 1.5) 0 var(--space-xl);
+            background-color: var(--bg-darker);
+            text-align: center;
+        }
+        
+        .page-title {
+            color: var(--gold-primary);
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: var(--space-sm);
+        }
+
+        /* Instagram Style Grid */
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .insta-item {
+            position: relative;
+            aspect-ratio: 1/1; /* Square images */
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .insta-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .insta-overlay i {
+            color: var(--text-main);
+            font-size: 2rem;
+        }
+
+        .insta-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .insta-item:hover .insta-overlay {
+            opacity: 1;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: var(--font-primary);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+        }
+
+        @media (max-width: 600px) {
+            .insta-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+                gap: 15px;
+            }
+            .gallery-filters {
+                gap: 10px;
+            }
+            .filter-btn {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">The Barber <span>Shop</span></a>
+            <button class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html" class="btn btn-outline" style="padding: 0.5rem 1rem; margin-top: -0.5rem;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container fade-in-up">
+            <h1 class="page-title">Our Work</h1>
+            <p>A showcase of precision and style.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container fade-in-up">
+
+            <div class="gallery-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Haircuts</button>
+                <button class="filter-btn">Beards</button>
+                <button class="filter-btn">Shop</button>
+            </div>
+
+            <div class="insta-grid">
+                <!-- Normally, these would be populated dynamically or point to individual high res images -->
+                <div class="insta-item">
+                    <img src="images/gallery/haircut1.png" alt="Haircut 1">
+                    <div class="insta-overlay"><span><i class="fas fa-search-plus"></i></span></div>
+                </div>
+                <div class="insta-item">
+                    <img src="images/gallery/beard1.png" alt="Beard 1">
+                    <div class="insta-overlay"><span><i class="fas fa-search-plus"></i></span></div>
+                </div>
+                <div class="insta-item">
+                    <img src="images/gallery/interior1.png" alt="Interior">
+                    <div class="insta-overlay"><span><i class="fas fa-search-plus"></i></span></div>
+                </div>
+                <!-- Placeholders for visual grid fill -->
+                <div class="insta-item" style="background: var(--bg-card);">
+                    <img src="images/hero_bg.png" alt="Placeholder">
+                    <div class="insta-overlay"><span><i class="fas fa-search-plus"></i></span></div>
+                </div>
+                <div class="insta-item" style="background: var(--bg-card);">
+                    <img src="images/gallery/haircut1.png" alt="Placeholder" style="filter: grayscale(40%);">
+                    <div class="insta-overlay"><span><i class="fas fa-search-plus"></i></span></div>
+                </div>
+                <div class="insta-item" style="background: var(--bg-card);">
+                    <img src="images/gallery/beard1.png" alt="Placeholder" style="filter: grayscale(40%);">
+                    <div class="insta-overlay"><span><i class="fas fa-search-plus"></i></span></div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: var(--space-lg);">
+                <a href="#" class="btn btn-outline"><i class="fab fa-instagram"></i> Follow on Instagram</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>The Barber Shop</h3>
+                    <p>Premium grooming experience, modern haircuts, and classic barber services in Bahadurgarh.</p>
+                </div>
+                <!-- ... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Barber Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

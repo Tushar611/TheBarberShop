@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | The Barber Shop Bahadurgarh</title>
+    <meta name="description"
+        content="Book your premium grooming appointment at The Barber Shop in Bahadurgarh.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .booking-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--bg-darker);
+            padding: var(--space-xl);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .booking-container h2 {
+            text-align: center;
+            margin-bottom: var(--space-md);
+            color: var(--gold-primary);
+        }
+
+        .booking-form .form-group {
+            margin-bottom: var(--space-md);
+        }
+
+        .booking-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 4px;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            transition: border-color var(--transition-fast);
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus,
+        .booking-form textarea:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+        }
+        
+        .whatsapp-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">The Barber <span>Shop</span></a>
+            <button class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html" class="active btn btn-outline" style="padding: 0.5rem 1rem; margin-top: -0.5rem;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="section-padding" style="margin-top: 80px; min-height: 70vh; display: flex; align-items: center;">
+        <div class="container fade-in-up">
+            <div class="booking-container">
+                <h2>Secure Your Spot</h2>
+                <p style="text-align: center; margin-bottom: var(--space-lg);">Fill out the details below to generate your booking request.</p>
+                
+                <form id="whatsappBookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="b_name">Full Name *</label>
+                        <input type="text" id="b_name" required placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="b_phone">Phone Number *</label>
+                        <input type="tel" id="b_phone" required placeholder="e.g. 090458 33581">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="b_service">Service Required *</label>
+                        <select id="b_service" required>
+                            <option value="">Select a Service...</option>
+                            <option value="Classic Haircut">Classic Haircut</option>
+                            <option value="Modern Fade Cut">Modern Fade Cut</option>
+                            <option value="Beard Styling">Beard Styling & Trim</option>
+                            <option value="Hair and Beard Combo">Hair + Beard Combo</option>
+                            <option value="Kids Haircut">Kids Haircut</option>
+                            <option value="Hair Wash and Styling">Hair Wash & Styling</option>
+                            <option value="General Inquiry">General Inquiry / Other</option>
+                        </select>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm);">
+                        <div class="form-group">
+                            <label for="b_date">Preferred Date *</label>
+                            <input type="date" id="b_date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="b_time">Preferred Time *</label>
+                            <input type="time" id="b_time" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-sm);">Confirm Booking Request</button>
+                    
+                    <div class="whatsapp-hint">
+                        <i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.2rem;"></i>
+                        This will redirect you to WhatsApp to send your details.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>The Barber Shop</h3>
+                    <p>Premium grooming experience, modern haircuts, and classic barber services in Bahadurgarh.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="book.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Shop No 53, Omaxe Galleria, Bahadurgarh</li>
+                        <li><i class="fas fa-phone"></i> 090458 33581</li>
+                        <li><i class="fab fa-whatsapp"></i> 8709298368</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Barber Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
