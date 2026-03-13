@@ -7,16 +7,27 @@
     <meta name="description" content="Experience premium grooming, modern haircuts, and classic barber services at The Barber Shop in Omaxe Galleria, Bahadurgarh.">
     <meta name="keywords" content="Barber shop in Bahadurgarh, Best haircut Bahadurgarh, Beard styling near me, premium salon">
     
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -48,6 +59,31 @@
             </div>
         </div>
     </header>
+
+    <!-- Why Choose Us / Trust Stats -->
+    <section class="stats-section section-padding" style="background-color: var(--bg-card); position: relative; z-index: 2;">
+        <div class="container fade-in-up">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md); text-align: center;">
+                <div>
+                    <h2 style="color: var(--gold-primary); font-size: 3rem; margin-bottom: 5px;">500+</h2>
+                    <p style="color: var(--text-main); font-family: var(--font-primary); font-weight: 500; letter-spacing: 2px; text-transform: uppercase;">Happy Clients</p>
+                </div>
+                <div>
+                    <h2 style="color: var(--gold-primary); font-size: 3rem; margin-bottom: 5px;">3</h2>
+                    <p style="color: var(--text-main); font-family: var(--font-primary); font-weight: 500; letter-spacing: 2px; text-transform: uppercase;">Years in Business</p>
+                </div>
+                <div>
+                    <h2 style="color: var(--gold-primary); font-size: 3rem; margin-bottom: 5px;">100%</h2>
+                    <p style="color: var(--text-main); font-family: var(--font-primary); font-weight: 500; letter-spacing: 2px; text-transform: uppercase;">Satisfaction Goal</p>
+                </div>
+                <div>
+                    <h2 style="color: var(--gold-primary); font-size: 3rem; margin-bottom: 5px;">5.0</h2>
+                    <p style="color: var(--text-main); font-family: var(--font-primary); font-weight: 500; letter-spacing: 2px; text-transform: uppercase;">Google Rating</p>
+                </div>
+            </div>
+            <div class="gold-divider"></div>
+        </div>
+    </section>
 
     <!-- Services Preview Section -->
     <section class="services-preview section-padding" id="services">
@@ -169,7 +205,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 The Barber Shop. All Rights Reserved. <a href="#">Google Reviews</a></p>
+                <p>&copy; 2026 The Barber Shop. All Rights Reserved. <a href="https://g.page/r/" target="_blank">Google Reviews</a></p>
             </div>
         </div>
     </footer>

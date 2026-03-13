@@ -1,17 +1,62 @@
+// Page Loader Logic
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        // Add a slight delay for aesthetic smoothness
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 300);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+
+    // Create and append an overlay dynamically
+    let overlay = document.querySelector('.nav-overlay');
+    if (!overlay && hamburger && navLinks) {
+        overlay = document.createElement('div');
+        overlay.classList.add('nav-overlay');
+        document.body.appendChild(overlay);
+    }
 
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
+        const toggleMenu = () => {
             navLinks.classList.toggle('active');
+            if(overlay) overlay.classList.toggle('active');
             
-            // Toggle hamburger icon (optional, could change to 'X')
             if (navLinks.classList.contains('active')) {
                 hamburger.innerHTML = '&#10005;'; // X icon
+                body.style.overflow = 'hidden'; // Prevent scrolling
             } else {
                 hamburger.innerHTML = '&#9776;'; // Hamburger icon
+                body.style.overflow = '';
+            }
+        };
+
+        hamburger.addEventListener('click', toggleMenu);
+        if(overlay) overlay.addEventListener('click', toggleMenu);
+        
+        // Close menu when clicking a link
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if(navLinks.classList.contains('active')) toggleMenu();
+            });
+        });
+    }
+
+    // Sticky Navbar on Scroll
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
         });
     }

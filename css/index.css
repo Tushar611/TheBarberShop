@@ -4,17 +4,17 @@
 
 /* Hero Section */
 .hero {
-  height: 100vh;
-  min-height: 600px;
-  background-image: url('../images/hero_bg.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-image: url('../images/hero_bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Parallax effect */
+  background-repeat: no-repeat;
 }
 
 .hero-overlay {
