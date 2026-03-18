@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = `Hello, I would like to book an appointment.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${service}\n*Date:* ${date}\n*Time:* ${time}\n\nPlease confirm if this slot is available. Thank you!`;
             
             // WhatsApp Number
-            const waNumber = '918709298368';
+            const waNumber = '919050428490';
             
             // Redirect
             const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;

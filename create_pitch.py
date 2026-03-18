@@ -29,7 +29,7 @@ title.text_frame.paragraphs[0].font.color.rgb = gold_primary
 title.text_frame.paragraphs[0].font.name = "Playfair Display"
 title.text_frame.paragraphs[0].font.size = Pt(44)
 
-subtitle.text = "Elevating a Local Business into a Luxury Brand\nBahadurgarh, Haryana"
+subtitle.text = "Elevating a Local Business into a Luxury Brand\nJanakPuri, Delhi, Haryana"
 subtitle.text_frame.paragraphs[0].font.color.rgb = text_main
 subtitle.text_frame.paragraphs[0].font.name = "DM Sans"
 
@@ -89,7 +89,7 @@ title4.text = "Major Website Features & Upgrades"
 title4.text_frame.paragraphs[0].font.color.rgb = gold_primary
 
 tf4 = body4.text_frame
-tf4.text = "Dynamic WhatsApp Booking Flow: Forms send structured info directly to the shop's WhatsApp (+91 8709298368). Includes a 'Next available slot' urgency driver."
+tf4.text = "Dynamic WhatsApp Booking Flow: Forms send structured info directly to the shop's WhatsApp (+91 9050428490). Includes a 'Next available slot' urgency driver."
 tf4.add_paragraph().text = "Cinematic Parallax Hero: A full-screen, highly realistic luxury background that wows the user immediately."
 tf4.add_paragraph().text = "Luxury Aesthetics: Dark noise textures, gold-fill interactive buttons, Playfair Display headers, and custom gold dividers."
 tf4.add_paragraph().text = "Trust & Social Proof: '500+ Happy Clients', '5.0 Google Rating', and direct links to actual Google Reviews."
@@ -110,7 +110,7 @@ title5.text_frame.paragraphs[0].font.color.rgb = gold_primary
 tf5 = body5.text_frame
 tf5.text = "100% Mobile Optimized: Includes a modern dark slide-in drawer for mobile navigation, replacing basic menus."
 tf5.add_paragraph().text = "Sticky Glassmorphism Header: The 'Book Now' button follows the user as they scroll, capturing impulse bookings."
-tf5.add_paragraph().text = "Interactive Google Map: Embedded directly on the contact page for seamless navigation to Shop No 53, Omaxe Galleria."
+tf5.add_paragraph().text = "Interactive Google Map: Embedded directly on the contact page for seamless navigation to JanakPuri, Delhi."
 tf5.add_paragraph().text = "Page Loader & Animations: Custom gold spinner on initial load and smooth scroll-triggered fade-ins."
 
 for para in tf5.paragraphs:
